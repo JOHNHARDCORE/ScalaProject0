@@ -282,3 +282,779 @@ WARNING: Unmatched cancel notification for request id 1067
 [0m2021.10.23 22:50:09 INFO  [success] Total time: 14 s, completed Oct 23, 2021 10:50:09 PM[0m
 [0m2021.10.23 22:50:10 INFO  [info] loading settings for project scalaproject1 from build.sbt ...[0m
 [0m2021.10.23 22:50:10 INFO  [info] set current project to Slots (in build file:/C:/Users/BIGDADDYOFKUSHISTAN/Documents/Revature/ScalaProject1/)[0m
+[0m2021.10.23 22:50:24 INFO  [success] Generated .bloop\scalaproject1-test.json[0m
+[0m2021.10.23 22:50:24 INFO  [success] Generated .bloop\scalaproject1.json[0m
+[0m2021.10.23 22:50:24 INFO  [success] Total time: 12 s, completed Oct 23, 2021 10:50:24 PM[0m
+[0m2021.10.23 22:50:24 INFO  time: ran 'sbt bloopInstall' in 44s[0m
+[0m2021.10.23 22:50:24 INFO  Disconnecting from Bloop session...[0m
+[0m2021.10.23 22:50:24 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.10.23 22:50:24 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.10.23 22:50:24 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 13999'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:13999...
+The server is listening for incoming connections at tcp://127.0.0.1:13999...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.10.23 22:50:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\BIGDADDYOFKUSHISTAN\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.10.23 22:50:29 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 43097'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:43097...
+The server is listening for incoming connections at tcp://127.0.0.1:43097...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.10.23 22:50:32 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\BIGDADDYOFKUSHISTAN\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.10.23 22:50:32 INFO  time: Connected to build server in 7.89s[0m
+[0m2021.10.23 22:50:32 INFO  Connected to Build server: Bloop v1.4.9[0m
+[0m2021.10.23 22:50:33 INFO  time: Imported build in 0.68s[0m
+[0m2021.10.23 22:50:54 INFO  time: indexed workspace in 21s[0m
+[0m2021.10.23 22:50:57 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+[0m2021.10.23 22:51:20 INFO  Deduplicating compilation of scalaproject1 from bsp client 'Metals 0.10.7' (since 51.027s)[0m
+[0m2021.10.23 22:51:20 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.23 22:51:20 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.23 22:51:23 INFO  time: compiled scalaproject1 in 3.05s[0m
+[0m2021.10.23 22:51:26 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.23 22:51:27 INFO  time: compiled scalaproject1 in 1.65s[0m
+Oct 23, 2021 10:51:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:237)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:229)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+Oct 23, 2021 10:52:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1163
+Oct 23, 2021 10:52:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1170
+Oct 23, 2021 10:52:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1171
+[0m2021.10.23 22:52:44 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.23 22:52:44 INFO  time: compiled scalaproject1 in 0.65s[0m
+Oct 23, 2021 10:52:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1217
+Oct 23, 2021 10:52:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1224
+Oct 23, 2021 10:52:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1231
+[0m2021.10.23 22:53:28 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.23 22:53:28 INFO  time: compiled scalaproject1 in 0.79s[0m
+[0m2021.10.23 22:53:33 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.23 22:53:34 INFO  time: compiled scalaproject1 in 1.17s[0m
+[0m2021.10.23 22:53:36 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.23 22:53:37 INFO  time: compiled scalaproject1 in 1.01s[0m
+Oct 23, 2021 10:53:37 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+[0m2021.10.23 22:53:39 INFO  compiling scalaproject1 (2 scala sources)[0m
+Oct 23, 2021 10:53:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1255
+[0m2021.10.23 22:53:41 INFO  time: compiled scalaproject1 in 1.44s[0m
+[0m2021.10.23 22:53:43 INFO  compiling scalaproject1 (2 scala sources)[0m
+[0m2021.10.23 22:53:44 INFO  time: compiled scalaproject1 in 1.21s[0m
+[0m2021.10.23 22:53:47 INFO  compiling scalaproject1 (2 scala sources)[0m
+[0m2021.10.23 22:53:47 INFO  time: compiled scalaproject1 in 0.85s[0m
+Oct 23, 2021 10:54:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1292
+Oct 23, 2021 10:54:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1313
+[0m2021.10.23 22:54:25 INFO  compiling scalaproject1 (2 scala sources)[0m
+[0m2021.10.23 22:54:28 INFO  time: compiled scalaproject1 in 3.27s[0m
+[0m2021.10.23 22:54:40 INFO  Deduplicating compilation of scalaproject1 from bsp client 'Metals 0.10.7' (since 4m 11.165s)[0m
+[0m2021.10.23 22:54:47 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\BIGDADDYOFKUSHISTAN\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.10.23 22:54:48 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\BIGDADDYOFKUSHISTAN\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.10.23 22:54:48 INFO  Starting debug proxy for [App][0m
+[0m2021.10.23 22:54:49 INFO  Trying to attach to remote debuggee VM 127.0.0.1:60414 .[0m
+[0m2021.10.23 22:54:49 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.10.23 22:54:48 INFO  Canceling debug proxy for [App][0m
+Oct 23, 2021 10:54:49 PM org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer fireError
+SEVERE: java.net.SocketException: Socket closed
+org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.net.SocketException: Socket closed
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at scala.meta.internal.metals.debug.SocketEndpoint.consume(SocketEndpoint.scala:22)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.consume(MessageIdAdapter.scala:43)
+	at scala.meta.internal.metals.debug.ServerAdapter.send(ServerAdapter.scala:30)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$handleClientMessage$1(DebugProxy.scala:96)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.$anonfun$listen$1(MessageIdAdapter.scala:57)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at scala.meta.internal.metals.debug.SocketEndpoint.listen(SocketEndpoint.scala:26)
+	at scala.meta.internal.metals.debug.MessageIdAdapter.listen(MessageIdAdapter.scala:47)
+	at scala.meta.internal.metals.debug.DebugProxy.$anonfun$listenToClient$1(DebugProxy.scala:61)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketException: Socket closed
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:118)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
+	... 21 more
+
+[0m2021.10.23 22:54:49 INFO  Closing debug server tcp://0.0.0.0:60411[0m
+Oct 23, 2021 10:55:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1462
+Oct 23, 2021 10:55:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1457
+Oct 23, 2021 10:55:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1465
+Oct 23, 2021 10:55:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1682
+Oct 23, 2021 10:55:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1688
+Oct 23, 2021 10:55:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1689
+Oct 23, 2021 10:56:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1884
+Oct 23, 2021 10:57:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1988
+[0m2021.10.23 22:58:11 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.23 22:58:16 INFO  time: compiled scalaproject1 in 4.09s[0m
+[0m2021.10.23 22:58:21 INFO  Deduplicating compilation of scalaproject1 from bsp client 'Metals 0.10.7' (since 7m 52.408s)[0m
+[0m2021.10.23 22:58:28 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\BIGDADDYOFKUSHISTAN\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.10.23 22:58:30 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\BIGDADDYOFKUSHISTAN\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.10.23 22:58:30 INFO  Starting debug proxy for [App][0m
+[0m2021.10.23 22:58:30 INFO  Trying to attach to remote debuggee VM 127.0.0.1:60452 .[0m
+[0m2021.10.23 22:58:30 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.10.23 22:58:30 INFO  Canceling debug proxy for [App][0m
+[0m2021.10.23 22:58:30 INFO  Closing debug server tcp://0.0.0.0:60449[0m
+[0m2021.10.23 22:58:52 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.23 22:58:55 INFO  time: compiled scalaproject1 in 2.27s[0m
+[0m2021.10.23 22:58:57 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.23 22:58:59 INFO  time: compiled scalaproject1 in 1.84s[0m
+Oct 24, 2021 12:34:30 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2372
+Oct 24, 2021 12:36:26 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2507
+Oct 24, 2021 12:37:11 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2684
+Oct 24, 2021 12:38:26 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3000
+Oct 24, 2021 12:38:26 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2999
+Oct 24, 2021 12:38:26 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3004
+[0m2021.10.24 00:39:57 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 00:40:01 INFO  time: compiled scalaproject1 in 4s[0m
+[0m2021.10.24 00:40:01 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 00:40:01 INFO  time: compiled scalaproject1 in 0.68s[0m
+[0m2021.10.24 00:40:04 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 00:40:04 INFO  time: compiled scalaproject1 in 0.55s[0m
+[0m2021.10.24 00:40:04 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 00:40:05 INFO  time: compiled scalaproject1 in 0.5s[0m
+Oct 24, 2021 12:40:07 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+java.util.concurrent.CompletionException: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: DebugSessionAddress.  Compilation not successful
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:237)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:229)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+[0m2021.10.24 00:40:08 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:19:10: stale bloop error: type mismatch;
+ found   : Char('1')
+ required: String
+				case '1' => println("do this later")
+         ^^^[0m
+[0m2021.10.24 00:40:08 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:20:10: stale bloop error: type mismatch;
+ found   : Char('2')
+ required: String
+				case '2' => { println("exiting..."); State.SetContinue(false) }
+         ^^^[0m
+[0m2021.10.24 00:40:08 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:19:10: stale bloop error: type mismatch;
+ found   : Char('1')
+ required: String
+				case '1' => println("do this later")
+         ^^^[0m
+[0m2021.10.24 00:40:08 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:20:10: stale bloop error: type mismatch;
+ found   : Char('2')
+ required: String
+				case '2' => { println("exiting..."); State.SetContinue(false) }
+         ^^^[0m
+[0m2021.10.24 00:40:08 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:19:10: stale bloop error: type mismatch;
+ found   : Char('1')
+ required: String
+				case '1' => println("do this later")
+         ^^^[0m
+[0m2021.10.24 00:40:08 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:20:10: stale bloop error: type mismatch;
+ found   : Char('2')
+ required: String
+				case '2' => { println("exiting..."); State.SetContinue(false) }
+         ^^^[0m
+[0m2021.10.24 00:40:08 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:19:10: stale bloop error: type mismatch;
+ found   : Char('1')
+ required: String
+				case '1' => println("do this later")
+         ^^^[0m
+[0m2021.10.24 00:40:08 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:20:10: stale bloop error: type mismatch;
+ found   : Char('2')
+ required: String
+				case '2' => { println("exiting..."); State.SetContinue(false) }
+         ^^^[0m
+[0m2021.10.24 00:40:09 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:19:10: stale bloop error: type mismatch;
+ found   : Char('1')
+ required: String
+				case '1' => println("do this later")
+         ^^^[0m
+[0m2021.10.24 00:40:09 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:20:10: stale bloop error: type mismatch;
+ found   : Char('2')
+ required: String
+				case '2' => { println("exiting..."); State.SetContinue(false) }
+         ^^^[0m
+[0m2021.10.24 00:40:09 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:19:10: stale bloop error: type mismatch;
+ found   : Char('1')
+ required: String
+				case '1' => println("do this later")
+         ^^^[0m
+[0m2021.10.24 00:40:09 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:20:10: stale bloop error: type mismatch;
+ found   : Char('2')
+ required: String
+				case '2' => { println("exiting..."); State.SetContinue(false) }
+         ^^^[0m
+[0m2021.10.24 00:40:10 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:19:10: stale bloop error: type mismatch;
+ found   : Char('1')
+ required: String
+				case '1' => println("do this later")
+         ^^^[0m
+[0m2021.10.24 00:40:10 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:20:10: stale bloop error: type mismatch;
+ found   : Char('2')
+ required: String
+				case '2' => { println("exiting..."); State.SetContinue(false) }
+         ^^^[0m
+[0m2021.10.24 00:40:10 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:19:10: stale bloop error: type mismatch;
+ found   : Char('1')
+ required: String
+				case '1' => println("do this later")
+         ^^^[0m
+[0m2021.10.24 00:40:10 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:20:10: stale bloop error: type mismatch;
+ found   : Char('2')
+ required: String
+				case '2' => { println("exiting..."); State.SetContinue(false) }
+         ^^^[0m
+[0m2021.10.24 00:40:10 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:19:10: stale bloop error: type mismatch;
+ found   : Char('1')
+ required: String
+				case '1' => println("do this later")
+         ^^^[0m
+[0m2021.10.24 00:40:10 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:20:10: stale bloop error: type mismatch;
+ found   : Char('2')
+ required: String
+				case '2' => { println("exiting..."); State.SetContinue(false) }
+         ^^^[0m
+[0m2021.10.24 00:40:10 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:19:10: stale bloop error: type mismatch;
+ found   : Char('1')
+ required: String
+				case '1' => println("do this later")
+         ^^^[0m
+[0m2021.10.24 00:40:10 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:20:10: stale bloop error: type mismatch;
+ found   : Char('2')
+ required: String
+				case '2' => { println("exiting..."); State.SetContinue(false) }
+         ^^^[0m
+[0m2021.10.24 00:40:10 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:19:10: stale bloop error: type mismatch;
+ found   : Char('1')
+ required: String
+				case '1' => println("do this later")
+         ^^^[0m
+[0m2021.10.24 00:40:10 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:20:10: stale bloop error: type mismatch;
+ found   : Char('2')
+ required: String
+				case '2' => { println("exiting..."); State.SetContinue(false) }
+         ^^^[0m
+[0m2021.10.24 00:40:11 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:19:10: stale bloop error: type mismatch;
+ found   : Char('1')
+ required: String
+				case '1' => println("do this later")
+         ^^^[0m
+[0m2021.10.24 00:40:11 INFO  C:\Users\BIGDADDYOFKUSHISTAN\Documents\Revature\ScalaProject1\src\main\scala\App.scala:20:10: stale bloop error: type mismatch;
+ found   : Char('2')
+ required: String
+				case '2' => { println("exiting..."); State.SetContinue(false) }
+         ^^^[0m
+[0m2021.10.24 00:40:12 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 00:40:14 INFO  Deduplicating compilation of scalaproject1 from bsp client 'Metals 0.10.7' (since 1h 49m 45.558s)[0m
+[0m2021.10.24 00:40:14 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 00:40:16 INFO  time: compiled scalaproject1 in 1.69s[0m
+[0m2021.10.24 00:40:18 INFO  Deduplicating compilation of scalaproject1 from bsp client 'Metals 0.10.7' (since 1h 49m 49.563s)[0m
+[0m2021.10.24 00:40:26 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\BIGDADDYOFKUSHISTAN\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.10.24 00:40:27 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\BIGDADDYOFKUSHISTAN\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.10.24 00:40:27 INFO  Starting debug proxy for [App][0m
+[0m2021.10.24 00:40:27 INFO  Trying to attach to remote debuggee VM 127.0.0.1:62284 .[0m
+[0m2021.10.24 00:40:27 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.10.24 00:40:48 INFO  Canceling debug proxy for [App][0m
+[0m2021.10.24 00:40:48 INFO  Closing debug server tcp://0.0.0.0:62281[0m
+[0m2021.10.24 00:40:52 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 00:40:54 WARN  there was one deprecation warning; re-run with -deprecation for details[0m
+[0m2021.10.24 00:40:54 INFO  time: compiled scalaproject1 in 1.62s[0m
+[0m2021.10.24 00:41:05 INFO  Deduplicating compilation of scalaproject1 from bsp client 'Metals 0.10.7' (since 1h 50m 36.34s)[0m
+[0m2021.10.24 00:41:10 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\BIGDADDYOFKUSHISTAN\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.10.24 00:41:11 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\BIGDADDYOFKUSHISTAN\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.10.24 00:41:11 INFO  Starting debug proxy for [App][0m
+[0m2021.10.24 00:41:11 INFO  Trying to attach to remote debuggee VM 127.0.0.1:62304 .[0m
+[0m2021.10.24 00:41:11 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.10.24 00:41:35 INFO  Canceling debug proxy for [App][0m
+[0m2021.10.24 00:41:35 INFO  Closing debug server tcp://0.0.0.0:62301[0m
+[0m2021.10.24 00:41:50 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 00:41:56 INFO  Deduplicating compilation of scalaproject1 from bsp client 'Metals 0.10.7' (since 1h 51m 26.955s)[0m
+[0m2021.10.24 00:41:56 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 00:41:57 WARN  there was one deprecation warning; re-run with -deprecation for details[0m
+[0m2021.10.24 00:41:57 WARN  there was one deprecation warning; re-run with -deprecation for details[0m
+[0m2021.10.24 00:41:57 INFO  time: compiled scalaproject1 in 1.5s[0m
+[0m2021.10.24 00:42:04 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\BIGDADDYOFKUSHISTAN\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.10.24 00:42:07 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\BIGDADDYOFKUSHISTAN\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.10.24 00:42:07 INFO  Starting debug proxy for [App][0m
+[0m2021.10.24 00:42:07 INFO  Trying to attach to remote debuggee VM 127.0.0.1:62324 .[0m
+[0m2021.10.24 00:42:07 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.10.24 00:42:46 INFO  Canceling debug proxy for [App][0m
+[0m2021.10.24 00:42:46 INFO  Closing debug server tcp://0.0.0.0:62321[0m
+[0m2021.10.24 00:43:19 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 00:43:19 INFO  time: compiled scalaproject1 in 1s[0m
+[0m2021.10.24 00:43:28 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 00:43:29 INFO  time: compiled scalaproject1 in 1.11s[0m
+[0m2021.10.24 00:43:31 INFO  Deduplicating compilation of scalaproject1 from bsp client 'Metals 0.10.7' (since 1h 53m 2.575s)[0m
+[0m2021.10.24 00:43:37 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\BIGDADDYOFKUSHISTAN\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.10.24 00:43:38 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\BIGDADDYOFKUSHISTAN\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.10.24 00:43:38 INFO  Starting debug proxy for [App][0m
+[0m2021.10.24 00:43:38 INFO  Trying to attach to remote debuggee VM 127.0.0.1:62359 .[0m
+[0m2021.10.24 00:43:38 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.10.24 00:45:08 INFO  Canceling debug proxy for [App][0m
+[0m2021.10.24 00:45:08 INFO  Closing debug server tcp://0.0.0.0:62356[0m
+[0m2021.10.24 00:49:28 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 00:49:30 INFO  time: compiled scalaproject1 in 2.25s[0m
+[0m2021.10.24 00:49:49 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 00:49:50 INFO  time: compiled scalaproject1 in 1.27s[0m
+Oct 24, 2021 12:49:52 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Oct 24, 2021 11:23:45 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3976
+Oct 24, 2021 11:37:35 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4003
+Oct 24, 2021 11:37:35 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4004
+Oct 24, 2021 11:37:39 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4010
+Oct 24, 2021 11:37:47 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4045
+Oct 24, 2021 11:37:51 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4068
+Oct 24, 2021 11:38:39 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.InterruptedException
+java.util.concurrent.CompletionException: java.lang.InterruptedException
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:673)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:1975)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:42)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.pc.VirtualFileParams.checkCanceled(VirtualFileParams.java:25)
+	at scala.meta.internal.pc.CompletionProvider$$anonfun$1.apply(CompletionProvider.scala:77)
+	at scala.meta.internal.pc.CompletionProvider$$anonfun$1.apply(CompletionProvider.scala:76)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:410)
+	at scala.collection.Iterator$class.toStream(Iterator.scala:1320)
+	at scala.collection.AbstractIterator.toStream(Iterator.scala:1334)
+	at scala.collection.Iterator$$anonfun$toStream$1.apply(Iterator.scala:1320)
+	at scala.collection.Iterator$$anonfun$toStream$1.apply(Iterator.scala:1320)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1233)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1223)
+	at scala.collection.immutable.StreamIterator$$anonfun$next$1.apply(Stream.scala:1120)
+	at scala.collection.immutable.StreamIterator$$anonfun$next$1.apply(Stream.scala:1120)
+	at scala.collection.immutable.StreamIterator$LazyCell.v$lzycompute(Stream.scala:1109)
+	at scala.collection.immutable.StreamIterator$LazyCell.v(Stream.scala:1109)
+	at scala.collection.immutable.StreamIterator.hasNext(Stream.scala:1114)
+	at scala.collection.convert.Wrappers$IteratorWrapper.hasNext(Wrappers.scala:30)
+	at org.eclipse.lsp4j.jsonrpc.json.adapters.CollectionTypeAdapter.write(CollectionTypeAdapter.java:134)
+	at org.eclipse.lsp4j.jsonrpc.json.adapters.CollectionTypeAdapter.write(CollectionTypeAdapter.java:40)
+	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.write(TypeAdapterRuntimeTypeWrapper.java:69)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.write(ReflectiveTypeAdapterFactory.java:127)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.write(ReflectiveTypeAdapterFactory.java:245)
+	at com.google.gson.Gson.toJson(Gson.java:704)
+	at org.eclipse.lsp4j.jsonrpc.json.adapters.MessageTypeAdapter.write(MessageTypeAdapter.java:423)
+	at org.eclipse.lsp4j.jsonrpc.json.adapters.MessageTypeAdapter.write(MessageTypeAdapter.java:55)
+	at com.google.gson.Gson.toJson(Gson.java:704)
+	at com.google.gson.Gson.toJson(Gson.java:683)
+	at org.eclipse.lsp4j.jsonrpc.json.MessageJsonHandler.serialize(MessageJsonHandler.java:145)
+	at org.eclipse.lsp4j.jsonrpc.json.MessageJsonHandler.serialize(MessageJsonHandler.java:140)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:59)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.lambda$handleRequest$1(RemoteEndpoint.java:281)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670)
+	... 9 more
+
+Oct 24, 2021 11:38:40 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4281
+Oct 24, 2021 11:38:40 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4282
+Oct 24, 2021 11:38:40 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4283
+Oct 24, 2021 11:38:40 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4285
+Oct 24, 2021 11:38:40 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4284
+Oct 24, 2021 11:38:41 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4286
+Oct 24, 2021 11:38:41 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4287
+Oct 24, 2021 11:38:41 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4289
+Oct 24, 2021 11:38:41 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4292
+Oct 24, 2021 11:38:41 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4291
+Oct 24, 2021 11:38:41 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4293
+Oct 24, 2021 11:38:41 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4295
+Oct 24, 2021 11:38:47 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 10 is not a valid line number, allowed [0..9]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:121)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$4(Trees.scala:77)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:76)
+	at scala.meta.internal.metals.codeactions.PatternMatchRefactor.contribute(PatternMatchRefactor.scala:96)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:62)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:61)
+	at scala.collection.immutable.List.collect(List.scala:323)
+	at scala.meta.internal.metals.CodeActionProvider.codeActions(CodeActionProvider.scala:61)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeAction$1(MetalsLanguageServer.scala:1518)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLanguageServer.codeAction(MetalsLanguageServer.scala:1517)
+	... 15 more
+
+[0m2021.10.24 11:56:36 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 11:56:40 INFO  time: compiled scalaproject1 in 3.42s[0m
+Oct 24, 2021 12:05:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4802
+Oct 24, 2021 12:05:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4804
+Oct 24, 2021 12:05:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4807
+Oct 24, 2021 12:05:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4811
+Oct 24, 2021 12:05:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4812
+Oct 24, 2021 12:05:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4813
+Oct 24, 2021 12:05:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4824
+[0m2021.10.24 12:05:21 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 12:05:38 INFO  time: compiled scalaproject1 in 17s[0m
+Oct 24, 2021 12:53:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4835
+[0m2021.10.24 12:54:43 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 12:54:45 INFO  time: compiled scalaproject1 in 1.42s[0m
+Oct 24, 2021 12:55:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4969
+Oct 24, 2021 12:55:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4976
+Oct 24, 2021 12:55:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5024
+Oct 24, 2021 12:55:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5220
+Oct 24, 2021 12:56:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5271
+Oct 24, 2021 12:57:21 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Oct 24, 2021 12:57:22 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:379)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:130)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:105)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:95)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:147)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:963)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:812)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:23)
+
+Oct 24, 2021 12:57:38 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Oct 24, 2021 12:57:39 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:379)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:130)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:105)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:95)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:147)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:963)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:812)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:23)
+
+Oct 24, 2021 12:58:34 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Oct 24, 2021 12:58:35 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:379)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:130)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:105)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:95)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:147)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:963)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:812)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:23)
+
+Oct 24, 2021 12:58:47 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Oct 24, 2021 12:58:47 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:379)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:130)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:105)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:95)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:147)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:963)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:812)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:23)
+
+Oct 24, 2021 12:58:53 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Oct 24, 2021 12:58:54 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:379)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:130)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:105)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:95)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:147)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:963)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:812)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:23)
+
+[0m2021.10.24 13:07:12 INFO  compiling scalaproject1 (1 scala source)[0m
+Oct 24, 2021 1:07:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6259
+[0m2021.10.24 13:07:15 INFO  time: compiled scalaproject1 in 2.46s[0m
+Oct 24, 2021 1:07:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6265
+[0m2021.10.24 13:07:17 INFO  compiling scalaproject1 (1 scala source)[0m
+Oct 24, 2021 1:07:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6273
+[0m2021.10.24 13:07:22 INFO  time: compiled scalaproject1 in 4.92s[0m
+[0m2021.10.24 13:07:24 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 13:07:24 INFO  time: compiled scalaproject1 in 0.75s[0m
+Oct 24, 2021 1:07:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6328
+Oct 24, 2021 1:07:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6334
+Oct 24, 2021 1:07:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6341
+Oct 24, 2021 1:07:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6347
+[0m2021.10.24 13:07:53 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 13:07:53 INFO  time: compiled scalaproject1 in 0.5s[0m
+[0m2021.10.24 13:08:03 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 13:08:03 INFO  time: compiled scalaproject1 in 0.65s[0m
+Oct 24, 2021 1:09:02 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Oct 24, 2021 1:09:03 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:379)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:130)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:105)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:95)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:147)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:963)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:812)
+	at scala.meta.internal.pc.HoverProvider.typedHoverTreeAt(HoverProvider.scala:239)
+	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:26)
+
+[0m2021.10.24 13:09:05 INFO  compiling scalaproject1 (1 scala source)[0m
+Oct 24, 2021 1:09:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6438
+Oct 24, 2021 1:09:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6434
+Oct 24, 2021 1:09:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6435
+[0m2021.10.24 13:09:34 INFO  time: compiled scalaproject1 in 29s[0m
+[0m2021.10.24 13:09:40 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 13:09:42 INFO  time: compiled scalaproject1 in 1.52s[0m
+Oct 24, 2021 1:10:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6465
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6501
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6507
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6511
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6512
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6514
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6513
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6510
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6520
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6502
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6522
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6521
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6523
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6525
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6524
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6534
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6535
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6537
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6536
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6539
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6541
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6540
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6538
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6542
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6543
+Oct 24, 2021 1:11:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6545
+Oct 24, 2021 1:12:00 PM scala.meta.internal.pc.CompletionProvider expected$1
+WARNING: null
+[0m2021.10.24 13:12:53 INFO  time: code lens generation in 5.36s[0m
+Oct 24, 2021 1:12:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6642
+Oct 24, 2021 1:12:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6643
+Oct 24, 2021 1:12:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6649
+Oct 24, 2021 1:12:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6668
+[0m2021.10.24 13:12:55 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 13:12:57 INFO  time: compiled scalaproject1 in 1.63s[0m
+Oct 24, 2021 1:13:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6732
+[0m2021.10.24 13:13:10 INFO  compiling scalaproject1 (1 scala source)[0m
+[0m2021.10.24 13:13:14 INFO  time: compiled scalaproject1 in 3.9s[0m
+[0m2021.10.24 13:13:25 INFO  compiling scalaproject1 (1 scala source)[0m
+Oct 24, 2021 1:13:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6773
+[0m2021.10.24 13:13:28 INFO  time: compiled scalaproject1 in 2.42s[0m
+Oct 24, 2021 1:13:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6786
