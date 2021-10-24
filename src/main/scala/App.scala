@@ -6,19 +6,66 @@ import scala.io.StdIn.readLine
 
 object App {
 
+	def pollForInput(query: String = ">Enter your Input"): String = {
+		readLine(query + "\n")
+	}
+
+	def registerUser(): User = {
+		val id = pollForInput("ID: ")
+		val name = pollForInput("Name: ")
+
+		val new_user = new User(id.toInt, name)
+		State.SetUser(new_user)
+
+		return new_user
+	}
+	def login() {
+		println("logging in")
+		State.SetLoggedIn(true)
+	}
+
+	def exit() {
+		println("Exiting...")
+		State.SetLoggedIn(false)
+		State.SetContinue(false)
+	}
+	def loginScreen(): Boolean = {
+		println("Welcome to Scala Slots. Please log in or create a new user if you're new")
+		println("[1]: Log In")
+		println("[2]: Register New User")
+		println("[3]: Exit")
+		val input = pollForInput()
+		input match {
+			case "1" => { login() }
+			case "2" => { println("implement this")}
+			case "3" => { exit() }
+			case _ => println("Invalid choice")
+		}
+
+		return false
+	}
+
+	def mainMenu(): Boolean = {
+		println("What would you like to do?")
+		println("[1]: test")
+		println("[2]: exit")
+		val input = pollForInput()
+		input match {
+			case "1" => { println("u chose this life") }
+			case "2" => { exit() }
+			case _ => println("Invalid choice")			
+		}
+
+		return false
+	}
+
 	def main(args: Array[String]) {
 		println("Starting....\n\n")
 
 		do {
-			println("[1]: Make New User")
-			println("[2]: Exit")
-
-			val input = readLine(">Enter in an option: ")
-
-			input match {
-				case "1" => println("do this later")
-				case "2" => { println("exiting..."); State.SetContinue(false) }
-				case _ => println("invalid option")
+			val input = State.GetLoggedIn() match {
+				case true => mainMenu()
+				case false => loginScreen()
 			}
 		} while(State.GetContinue())
 
