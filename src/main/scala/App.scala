@@ -3,11 +3,15 @@ import java.sql.Connection
 import java.sql.PreparedStatement
 import java.sql.SQLException
 import scala.io.StdIn.readLine
+import scala.io.Source
+import java.io.FileNotFoundException
 
 object App {
 
 	def pollForInput(query: String = ">Enter your Input"): String = {
-		readLine(query + "\n")
+		val input = readLine(query)
+		println("\n\n")
+		input
 	}
 
 	def registerUser(): User = {
@@ -37,7 +41,7 @@ object App {
 		val input = pollForInput()
 		input match {
 			case "1" => { login() }
-			case "2" => { println("implement this")}
+			case "2" => { registerUser() }
 			case "3" => { exit() }
 			case _ => println("Invalid choice")
 		}
@@ -47,11 +51,11 @@ object App {
 
 	def mainMenu(): Boolean = {
 		println("What would you like to do?")
-		println("[1]: test")
+		println("[1]: display my information")
 		println("[2]: exit")
 		val input = pollForInput()
 		input match {
-			case "1" => { println("u chose this life") }
+			case "1" => { State.GetUser().PrintInformation() }
 			case "2" => { exit() }
 			case _ => println("Invalid choice")			
 		}
@@ -59,8 +63,32 @@ object App {
 		return false
 	}
 
+	def loadFile(file: String): Map[String, String] = {
+		try {
+			Source.fromFile(file).
+				getLines.
+				map(line => (line.split("=").map(word => word.trim))).
+				map({case Array(first, second) => (first, second)}).
+				toMap
+		} catch {
+			case e: FileNotFoundException => {
+				println(s"Couldn't find that file: $file\n")
+				println(s"********** Place SQL login details in resource/login.txt **********")
+				println(s"********** With format                                   **********")
+				println(s"********** ip = your_ip:port                             **********")
+				println(s"********** username = your_username                      **********")
+				println(s"********** password = your_password                      **********")
+				
+				throw e
+			}
+			case e: Throwable => throw e
+		}
+	}
 	def main(args: Array[String]) {
 		println("Starting....\n\n")
+
+		// todo: hookup database/make tables, basic game logic
+		val configs = loadFile("resources/login.txt") 
 
 		do {
 			val input = State.GetLoggedIn() match {
