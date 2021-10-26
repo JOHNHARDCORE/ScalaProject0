@@ -7,42 +7,96 @@ import scala.io.Source
 import java.io.FileNotFoundException
 
 object App {
-
 	def pollForInput(query: String = ">Enter your Input"): String = {
-		val input = readLine(query)
-		println("\n\n")
+		val input = readLine(s"$query\n")
+		println("\n")
 		input
 	}
 
-	def registerUser(): User = {
-		val id = pollForInput("ID: ")
+	def findUser() {
 		val name = pollForInput("Name: ")
 
-		val new_user = new User(id.toInt, name)
-		State.SetUser(new_user)
-
-		return new_user
+		Database.GetUser(name) match {
+			case Some(res) => {
+				res.PrintInformation()
+			}
+			case None => {
+				println(s"Couldn't find user ${name}")
+			}
+		}
 	}
+
+	def registerUser(): Option[User] = {
+		// could conslidate these two
+		val name = pollForInput("Name: ")
+		val pass = pollForInput("Password: ")
+
+		var new_user = new User(name, pass)
+		try {
+			Database.GetUser(name) match {
+				case Some(res) => { println("User already exists!\n"); None }
+				case None => {
+					Database.InsertNewUser(new_user)
+					State.SetUser(new_user)
+					Some(new_user)
+				}
+			}
+		} catch {
+			case e: SQLException => { println("Not saving this session."); State.SetSave(false); None }
+		}
+	}
+
 	def login() {
-		println("logging in")
-		State.SetLoggedIn(true)
+		val name = pollForInput("Name: ")
+		val pass = pollForInput("Password: ")
+
+		Database.GetUser(name) match {
+			case Some(res) => { 
+				if (!(res.GetPassword() == pass && res.GetUsername() == name)) { return }
+
+				State.SetLoggedIn(true)
+				State.SetUser(res)
+			}
+			case None => {
+				println(s"Incorrect login")
+			}
+		}
 	}
 
 	def exit() {
 		println("Exiting...")
+		val user = State.GetUser()
+		if(State.GetSave() && user.GetID() != -1) {
+			Database.SaveUser(user)
+		}
 		State.SetLoggedIn(false)
 		State.SetContinue(false)
 	}
+
+	def connectToDB() = {
+		val configs = loadFile("resources/login.txt") 
+
+		val driver = "com.mysql.cj.jdbc.Driver"
+		val url = s"jdbc:mysql://${configs("ip")}/${configs("db")}"
+		val username = s"${configs("username")}"
+		val password = s"${configs("password")}"
+
+		Class.forName(driver)
+		Database.SetConnection(url, username, password)
+	}
+
 	def loginScreen(): Boolean = {
 		println("Welcome to Scala Slots. Please log in or create a new user if you're new")
 		println("[1]: Log In")
 		println("[2]: Register New User")
-		println("[3]: Exit")
+		println("[3]: Find User")
+		println("[4]: Exit")
 		val input = pollForInput()
 		input match {
 			case "1" => { login() }
 			case "2" => { registerUser() }
-			case "3" => { exit() }
+			case "3" => { findUser() }
+			case "4" => { exit() }
 			case _ => println("Invalid choice")
 		}
 
@@ -57,7 +111,7 @@ object App {
 		input match {
 			case "1" => { State.GetUser().PrintInformation() }
 			case "2" => { exit() }
-			case _ => println("Invalid choice")			
+			case _ => println("Invalid choice")
 		}
 
 		return false
@@ -78,17 +132,19 @@ object App {
 				println(s"********** ip = your_ip:port                             **********")
 				println(s"********** username = your_username                      **********")
 				println(s"********** password = your_password                      **********")
+				println(s"********** db = your_db                                  **********")
 				
 				throw e
 			}
 			case e: Throwable => throw e
 		}
 	}
+
 	def main(args: Array[String]) {
 		println("Starting....\n\n")
 
-		// todo: hookup database/make tables, basic game logic
-		val configs = loadFile("resources/login.txt") 
+		connectToDB()
+		// todo: basic game logic
 
 		do {
 			val input = State.GetLoggedIn() match {
@@ -97,23 +153,6 @@ object App {
 			}
 		} while(State.GetContinue())
 
-
-
-		// sql driver stuff
-
-		// val driver = "com.mysql.cj.jdbc.Driver"
-		// val url = "jdbc:mysql://localhost:3306/test"
-		// val username = "root"
-		// val password = "p4ssword"
-
-		// var connection:Connection = DriverManager.getConnection(url, username, password)
-		// val statement = connection.createStatement()
-		// val resultSet = statement.executeQuery("SELECT * FROM users;")
-		// println(resultSet)
-		// while ( resultSet.next() ) {
-		//   println(resultSet.getString(1)+", " +resultSet.getString(2) +", " +resultSet.getString(3))
-		// }
-		// connection.close()
 	}
 
 }

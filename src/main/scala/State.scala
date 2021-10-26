@@ -1,6 +1,7 @@
 object State {
 	private var continue = true
 	private var logged_in = false
+	private var save = true
 	private var user: User = new User()
 
 	def SetContinue(new_state: Boolean) { this.continue = new_state }
@@ -11,4 +12,7 @@ object State {
 
 	def SetLoggedIn(new_state: Boolean) { this.logged_in = new_state }
 	def GetLoggedIn(): Boolean = { this.logged_in }
+
+	def SetSave(new_state: Boolean) { this.save = new_state }
+	def GetSave(): Boolean = { this.save }
 }
