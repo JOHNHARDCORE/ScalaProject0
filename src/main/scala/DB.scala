@@ -82,8 +82,6 @@ object Database {
 
 	def GetUser(name: String): Option[User] = {
 		try {
-			val query = s"SELECT * FROM users WHERE username = '${name}';"
-
 			searchUser(name) match {
 				case Some(res) => {
 					if (res.next()) {

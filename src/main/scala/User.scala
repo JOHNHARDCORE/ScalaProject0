@@ -23,7 +23,7 @@ class User(private var username: String = "Guest", private var password: String 
 		println("---------------------------------")
 		println(s"Username: ${this.GetUsername()}")
 		println(s"Balance: $$${this.GetBalance()}")
-		println("---------------------------------")
+		println("---------------------------------\n")
 	}
 	// convenience functions
 	private def HandleBalance(amount: Int) {

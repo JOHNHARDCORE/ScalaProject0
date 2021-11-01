@@ -9,7 +9,6 @@ import java.io.FileNotFoundException
 object App {
 	def pollForInput(query: String = ">Enter your Input"): String = {
 		val input = readLine(s"$query\n")
-		println("\n")
 		input
 	}
 
@@ -52,13 +51,13 @@ object App {
 
 		Database.GetUser(name) match {
 			case Some(res) => { 
-				if (!(res.GetPassword() == pass && res.GetUsername() == name)) { return }
+				if (!(res.GetPassword() == pass && res.GetUsername() == name)) { println("Incorrect login\n"); return }
 
 				State.SetLoggedIn(true)
 				State.SetUser(res)
 			}
 			case None => {
-				println(s"Incorrect login")
+				println(s"Incorrect login\n")
 			}
 		}
 	}
@@ -86,7 +85,7 @@ object App {
 	}
 
 	def loginScreen(): Boolean = {
-		println("Welcome to Scala Slots. Please log in or create a new user if you're new")
+		println("\nWelcome to Scala Slots. Please log in or create a new user if you're new")
 		println("[1]: Log In")
 		println("[2]: Register New User")
 		println("[3]: Find User")
@@ -97,7 +96,7 @@ object App {
 			case "2" => { registerUser() }
 			case "3" => { findUser() }
 			case "4" => { exit() }
-			case _ => println("Invalid choice")
+			case _ => println("Invalid choice\n")
 		}
 
 		return false
@@ -105,13 +104,13 @@ object App {
 
 	def mainMenu(): Boolean = {
 		println("What would you like to do?")
-		println("[1]: display my information")
-		println("[2]: exit")
+		println("[1]: Display My Information")
+		println("[2]: Exit")
 		val input = pollForInput()
 		input match {
 			case "1" => { State.GetUser().PrintInformation() }
 			case "2" => { exit() }
-			case _ => println("Invalid choice")
+			case _ => println("Invalid choice\n")
 		}
 
 		return false
